@@ -1,0 +1,470 @@
+
+  
+  body {
+    background-color:#F8ECE4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .section-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 
+      0 15px 25px var(--shadow-color),
+      0 5px 10px var(--shadow-color);
+    transform: perspective(1000px) rotateX(0deg);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .section-container:hover {
+    transform: perspective(1000px) rotateX(2deg) translateY(-5px);
+  }
+  
+  /* Section Découverte */
+  .discover-section {
+    display: flex;
+    align-items: stretch;
+    min-height: 400px;
+  }
+  
+  .discover-image {
+    flex: 1;
+    background-image: url('carte.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .discover-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  
+  /* Section Taj Mahal */
+  .tajmahal-section {
+    padding: 40px;
+  }
+  
+  .tajmahal-header {
+    margin-bottom: 30px;
+  }
+  
+  .tajmahal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .tajmahal-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .tajmahal-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .tajmahal-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Typographie */
+  h1, h2 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  p {
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.9;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .section-container {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  
+/* Banner hérité de la page précédente */
+.banner {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Contenu principal */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Sections des merveilles */
+.wonder-section {
+    margin-bottom: 4rem;
+    background-color: var(--card-bg);
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.section-container {
+    padding: var(--section-padding);
+}
+
+.wonder-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+/* Grille d'activités */
+.activities-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.activities-grid.two-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Cartes d'activités */
+.activity-card {
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.activity-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.25rem;
+}
+
+.activity-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .activities-grid,
+    .activities-grid.two-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .activities-grid,
+    .activities-grid.two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .section-container {
+        padding: 2rem 1rem;
+    }
+
+    .wonder-section h2 {
+        font-size: 2rem;
+    }
+}
+
+.landmark-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 
+      0 15px 25px var(--shadow-color),
+      0 5px 10px var(--shadow-color);
+    transform: perspective(1000px) rotateX(0deg);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .landmark-wrapper:hover {
+    transform: perspective(1000px) rotateX(2deg) translateY(-5px);
+  }
+  
+  .landmark-heading {
+    font-size: 2em;
+    color: var(--text-color);
+    margin-bottom: 30px;
+  }
+  
+  .attraction-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .attraction-box {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  
+  .attraction-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .attraction-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .attraction-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 10px 0;
+  }
+  
+  .attraction-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.9;
+  }
+  
+  @keyframes slideUpFade {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .landmark-wrapper {
+    animation: slideUpFade 0.8s ease-out forwards;
+  }
+
+/* Barcelona Section */
+.city-showcase {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 
+      0 15px 25px black,
+      0 5px 10px black;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .city-showcase:hover {
+    transform: translateY(-5px);
+  }
+  
+  .city-title {
+    font-size: 2em;
+    color: var(--text-color);
+    margin-bottom: 30px;
+  }
+  
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .highlight-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .highlight-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .highlight-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .highlight-desc {
+    font-size: 1em;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+
+  .bloc-principal {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 
+      0 15px 25px var(--couleur-ombre),
+      0 5px 10px var(--couleur-ombre);
+  }
+  
+  .conteneur-flexible {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  
+  .grande-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .bloc-texte {
+    padding-right: 20px;
+  }
+  
+  .grand-titre {
+    font-size: 2.2em;
+    color: var(--couleur-texte);
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .liste-avantages {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .element-avantage {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  
+  .pastille-numero {
+    background-color: var(--couleur-numero);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--couleur-texte);
+  }
+  
+  .contenu-avantage {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .titre-avantage {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--couleur-texte);
+    margin: 0;
+  }
+  
+  .texte-avantage {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--couleur-texte);
+    margin: 0;
+    opacity: 0.9;
+  }
+  
+  @keyframes apparition {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .bloc-principal {
+    animation: apparition 0.8s ease-out forwards;
+  }
+  
